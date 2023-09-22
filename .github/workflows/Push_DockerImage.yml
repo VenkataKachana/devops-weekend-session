@@ -28,10 +28,10 @@ jobs:
           
     - name: Build the Docker image
       run: |
-          docker build . --file Dockerfile --tag Springboot-app:latest
-          docker tag flask-app:latest dockerimageregistrytest.azurecr.io/Springboot-app:latest
+          docker build . --file Dockerfile --tag springboot-app:latest
+          docker tag flask-app:latest dockerimageregistrytest.azurecr.io/springboot-app:latest
           docker login dockerimageregistrytest.azurecr.io -u "$ACR_USERNAME" -p "$ACR_PASSWORD"
-          docker push dockerimageregistrytest.azurecr.io/Springboot-app:latest
+          docker push dockerimageregistrytest.azurecr.io/springboot-app:latest
 
 # jobs:
 #   build_and_deploy_job:
